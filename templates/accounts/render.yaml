@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: cetelem
+    env: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn cetelem.wsgi:application"
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: "remplace-par-une-cle-secrete"
+      - key: DEBUG
+        value: "False"
+      - key: PYTHON_VERSION
+        value: "3.10"

