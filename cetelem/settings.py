@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-q5%h+##lgo-*u(nhq=-=+p*8kue_2dbj=kwq720v+ypxh*1sso
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['celetem-1.onrender.com', 'www.celetem-1.onrender.com']
 
 
 # Application definition
